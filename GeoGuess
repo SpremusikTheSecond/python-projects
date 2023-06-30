@@ -1,1 +1,27 @@
+print("Welcome to my Geography game!")
+print("This will only be made for European countries and their capitals!")
 
+score = 0 
+
+playing = input("Would you like to play? ")
+if playing.lower() != "yes":
+    quit()
+print("Okay let's see your skills then!")
+
+answer = input("What is the Capital of Ireland? ")
+if answer.lower() == "dublin":
+    print("Correct")
+    score += 1 
+else:
+    print("Incorrect")
+
+
+answer = input("What is the Capital of Germany? ")
+if answer.lower() == "berlin":
+    print("Correct")
+    score += 1 
+else:
+    print("Incorrect")
+
+
+print(f"Your final score is {score}/2")
