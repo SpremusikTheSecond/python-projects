@@ -1,27 +1,49 @@
+MIN_ROUNDS = 1
+MAX_ROUNDS = 5
+
+
+
 print("Welcome to my Geography game!")
 print("This will only be made for European countries and their capitals!")
 
-score = 0 
-
-playing = input("Would you like to play? ")
+playing = input("Would you like to play? Yes/No ")
 if playing.lower() != "yes":
     quit()
-print("Okay let's see your skills then!")
 
-answer = input("What is the Capital of Ireland? ")
-if answer.lower() == "dublin":
-    print("Correct")
-    score += 1 
+rounds = input(f"How many rounds would you like to play? {MIN_ROUNDS} and {MAX_ROUNDS} ")
+if rounds.isdigit():
+    rounds = int(rounds)
+    if rounds < 1: 
+        print(f"You must type a number between {MIN_ROUNDS} and {MAX_ROUNDS} ")
+    else:
+        print("Okay let's test your skills! ")
+
+answer = input("What is the captial of Germany? ")
+if answer.lower() !="berlin":
+    print("Your answer is incorect! ")
 else:
-    print("Incorrect")
+    print("Your answer is correct! ")
 
-
-answer = input("What is the Capital of Germany? ")
-if answer.lower() == "berlin":
-    print("Correct")
-    score += 1 
+answer = input("What is the capital of France? ")
+if answer.lower() != "paris":
+    print("Your answer is incorrect! ")
 else:
-    print("Incorrect")
+    print("Your answer is correct! ")
 
+answer = input("What is the capital of Denmark? ")
+if answer.lower() != "copenhagen":
+    print("Your answer is incorrect! ")
+else:
+    print("Your answer is correct! ")
 
-print(f"Your final score is {score}/2")
+answer = input("What is the capital of Finland? ")
+if answer.lower() != "helsinki":
+    print("Your answer is incorrect! ")
+else:
+    print("Your answer is correct! ")
+
+answer = input("What is the capital of England? ")
+if answer.lower() != "london":
+    print("Your answer is incorrect! ")
+else:
+    print("Your answer is correct! ")
